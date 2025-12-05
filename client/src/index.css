@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* --- Calendar Styles (High Contrast Version) --- */
+.react-calendar {
+  width: 100% !important;
+  max-width: 100%;
+  /* 👇 เปลี่ยนจาก white เป็น #f9fafb (เทาจางๆ) เพื่อให้ตัดกับพื้นหลัง */
+  background: #f9fafb !important; 
+  /* 👇 เพิ่มเส้นขอบ เพื่อให้ตัดกับพื้นหลังชัดเจน */
+  border: 1px solid #e5e7eb !important; 
+  border-radius: 1.5rem;
+  font-family: 'Prompt', sans-serif;
+  /* 👇 เพิ่มเงาให้เข้มขึ้นอีกนิด จะได้ดูลอยออกมา */
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  padding: 1.5rem;
+  line-height: 1.5em !important;
+  font-size: 1.1rem;
+}
+
+/* ปุ่มเปลี่ยนเดือน/ปี */
+.react-calendar__navigation button {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #38a89d;
+  min-width: 44px;
+  background: none;
+  margin-bottom: 1rem;
+}
+
+/* ช่องวันที่แต่ละวัน */
+.react-calendar__tile {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px !important;
+  font-size: 1.2rem;
+  /* 👇 เพิ่มสีพื้นหลังให้ช่องวันปกตินิดนึง จะได้ดูเป็นช่องๆ */
+  background-color: white; 
+  margin: 1px; /* เว้นช่องว่างระหว่างวันนิดนึง */
+  border-radius: 8px; /* มนๆ */
+}
+
+/* 🌟 วันนี้ (Highlight Today) */
+.react-calendar__tile--now {
+  background: #fff7ed !important; 
+  border: 2px solid #f77a45 !important;
+  color: #c2410c !important;
+  font-weight: bold;
+}
+
+/* วันที่ถูกเลือก (Selected) */
+.react-calendar__tile--active {
+  background: #38a89d !important;
+  color: white !important;
+  border: none !important;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #2d857c !important;
+}
+
+/* จุดสีส้ม */
+.event-dot {
+  height: 8px;
+  width: 8px;
+  background-color: #f77a45;
+  border-radius: 50%;
+  display: block;
+  margin-top: auto;
+  margin-bottom: 5px;
+}
