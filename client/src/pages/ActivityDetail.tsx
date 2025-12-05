@@ -26,7 +26,7 @@ const ActivityDetail = () => {
       if (token) {
         const bookingsRes = await api.get('/my-bookings');
         // เช็คว่าในรายการจอง มี ID กิจกรรมนี้ไหม
-        const booked = bookingsRes.data.some((b: any) => (b.activity._id || b.activity) === id);
+        const booked = bookingsRes.data.some((b: any) => (b?.activity?._id || b?.activity) === id);
         setIsBooked(booked);
       }
     } catch (error) {
