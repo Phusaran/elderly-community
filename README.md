@@ -2,20 +2,37 @@
 
 โปรเจกต์ Backend สำหรับระบบปฏิทินและกิจกรรมชุมชนผู้สูงอายุ พัฒนาด้วย **Node.js**, **Express**, **TypeScript** และ **MongoDB**
 
-ระบบรองรับฟังก์ชัน:
-- ✅ **Authentication:** สมัครสมาชิก / เข้าสู่ระบบ (JWT)
-- ✅ **Authorization:** แยกสิทธิ์ Admin (คนจัดกิจกรรม) และ User (ผู้สูงอายุ)
-- ✅ **Activity CRUD:** สร้าง, แก้ไข, ลบ กิจกรรม (Admin only)
-- ✅ **Booking System:** จองเข้าร่วมกิจกรรม และเช็คประวัติการจอง (User only)
+## 🚀 ฟีเจอร์หลัก (Key Features)
+
+### 👤 สำหรับสมาชิก (User)
+- **Authentication:** ระบบสมัครสมาชิก และเข้าสู่ระบบ (มีความปลอดภัยด้วย JWT)
+- **Activity Booking:** ดูปฏิทินกิจกรรม, กดลงทะเบียนเข้าร่วม, และยกเลิกการจองได้
+- **Smart Calendar:** ปฏิทินส่วนตัว แสดงวันหยุดราชการไทยและกิจกรรมที่จองไว้
+- **Marketplace:** ตลาดนัดชุมชน ลงขายสินค้า, แก้ไข, และลบประกาศของตัวเองได้
+- **Social & Comments:** แสดงความคิดเห็นใต้กิจกรรม พร้อมระบบ **กรองคำหยาบ (Bad Word Filter)** และแสดงสถานะการแก้ไขข้อความ
+- **User Profile:** แก้ไขข้อมูลส่วนตัว, รูปโปรไฟล์ และเขียนแนะนำตัว (Bio)
+
+### 🛠️ สำหรับผู้ดูแลระบบ (Admin)
+- **Admin Dashboard:** หน้าแดชบอร์ดสรุปภาพรวม แยกแท็บจัดการชัดเจน
+- **Activity Management:** สร้าง, แก้ไข, ลบ กิจกรรมต่างๆ ในชุมชน
+- **User Management:** ดูรายชื่อสมาชิก, แก้ไขสิทธิ์ (Promote Admin), หรือแบนสมาชิก (Delete User)
+- **Content Moderation:** สิทธิ์ในการลบสินค้า หรือคอมเมนต์ที่ไม่เหมาะสมได้ทันที
 
 ---
 
 ## 🛠️ Tech Stack
-- **Runtime:** Node.js
-- **Language:** TypeScript
-- **Framework:** Express.js
-- **Database:** MongoDB (Atlas) + Mongoose
-- **Auth:** JSON Web Token (JWT) + bcryptjs
+
+**Frontend:**
+- ⚛️ **React + Vite** (TypeScript)
+- 🎨 **Tailwind CSS + DaisyUI** (Theming & UI Components)
+- 📅 **React Calendar** (Custom Styled)
+- 🔗 **Axios** (API Connection)
+
+**Backend:**
+- 🟢 **Node.js + Express** (TypeScript)
+- 🗄️ **MongoDB (Atlas)** + Mongoose
+- 🔐 **JWT + Bcrypt** (Authentication & Security)
+- 🛡️ **Cors & Dotenv**
 
 ---
 
